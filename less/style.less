@@ -1,0 +1,2697 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Fira Sans', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+@black: #282828;
+@grey: #717171;
+@white: #ffffff;
+@red: #e51515;
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    display: block;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    background-image: url(../img/bcg-header.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    color: @white;
+    background-color: @black;
+
+
+    a {
+        color: @white;
+    }
+
+    &__links-list--account {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 30px 0 0;
+
+        li {
+            padding: 0 3px;
+        }
+
+        &:before {
+            content: ' ';
+            padding: 0 3px 3px 0;
+            background: url('../img/sprint.png') no-repeat;
+            background-position: -45px -48px;
+            width: 11px;
+            height: 13px;
+        }
+    }
+
+    &__wrapper,
+    &__wrapper2 {
+        padding: 10px 0 40px;
+        width: 1170px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    &__wrapper2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0 0;
+    }
+
+    &__column-1 {
+        width: 33.3%;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        .header__number-image {
+            width: 20px;
+            height: 19px;
+        }
+
+        .header__list-number {
+            li {
+                padding: 5px 10px;
+            }
+        }
+    }
+
+    &__column-2 {
+        display: flex;
+        justify-content: center;
+        width: 350px;
+
+        .header__logo-link {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header__logo-image {
+            width: 100%;
+        }
+
+    }
+
+    &__column-3 {
+        width: 33.3%;
+        padding-right: 60px;
+        display: flex;
+        justify-content: flex-end;
+
+        .header__link-wrapper {
+
+            &:before {
+                content: ' ';
+                background: url('../img/sprint.png') no-repeat;
+                background-position: -0px -125px;
+                width: 30px;
+                height: 26px;
+            }
+
+            .header__link {
+                span {
+                    margin: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: rgb(229, 21, 21);
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+
+}
+
+//навигация в хедер футер
+//навигация в хедер футер
+
+.nav__main-menu {
+    border-bottom: 1px solid @red;
+    border-top: 1px solid @red;
+    background-color: rgba(31, 32, 39, 0.9);
+
+
+    .nav__wrapper {
+        display: flex;
+        width: 1170px;
+        margin: 0 auto;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .main-menu {
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+
+        &__link {
+            font-size: 14px;
+            padding: 0 25px;
+            height: 75px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                background-color: @red;
+            }
+
+            &:before {
+                content: " ";
+                margin-right: 10px;
+                background: url('../img/sprint.png') no-repeat;
+            }
+        }
+
+        &__link--home:before {
+            background-position: -45px -35px;
+            width: 15px;
+            height: 13px;
+        }
+
+        &__link--nissan:before {
+            background-position: -19px -156px;
+            width: 19px;
+            height: 19px;
+        }
+
+        &__link--infiniti:before {
+            background-position: -30px -137px;
+            width: 19px;
+            height: 19px;
+        }
+
+        &__link--delivery:before {
+            background-position: -0px -151px;
+            width: 19px;
+            height: 19px;
+        }
+
+        &__link--contact:before {
+            background-position: -38px -118px;
+            width: 20px;
+            height: 19px;
+        }
+
+    }
+
+    .nav__search-form {
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+
+        .nav__input-search {
+            font-size: 14px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0);
+            padding: 10px 15px;
+            border-left: 1px solid @red;
+            height: 30px;
+            width: 180px;
+        }
+
+        .nav__search-button {
+            background: url('../img/sprint.png') no-repeat;
+            background-position: -38px -99px;
+            width: 20px;
+            height: 19px;
+        }
+
+    }
+
+}
+
+main {
+    background-image: url(../img/main-bacg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0 45px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__link {
+        font-weight: 200;
+        margin-right: 5px;
+        color: @grey;
+        font-size: 14px;
+    }
+
+    .activ {
+        color: @red;
+    }
+}
+
+.home {
+    width: 100%;
+    background-image: url(../img/bacg-home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 630px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__wrapper {
+        color: #fff;
+        display: flex;
+        width: 1110px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 200;
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        padding: 0 1px 1px 20px;
+        border-radius: 20px;
+        background-color: @red;
+        height: 40px;
+        width: 255px;
+    }
+
+    &__nissan {
+        padding-right: 50px;
+        text-align: left;
+        width: 50%;
+    }
+
+    &__infiniti {
+        padding-left: 50px;
+        text-align: right;
+        width: 50%;
+
+        .home__link {
+            margin-left: auto;
+            flex-direction: row-reverse;
+            padding: 0 20px 1px 1px;
+
+            img {
+                transform: scaleX(-1);
+            }
+        }
+    }
+}
+
+//блок преимущества
+//блок преимущества
+.advantages {
+    padding: 140px 0 100px;
+
+    &__wrapper {
+        width: 1140px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    &__column {
+        text-align: center;
+        padding: 0 20px;
+        width: 33.33%;
+    }
+
+    &__title {
+        color: @black;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: 500;
+
+        &:before {
+            content: ' ';
+            background: url('../img/sprint.png') no-repeat;
+            position: absolute;
+
+        }
+
+    }
+
+
+    &__title-delivery:before {
+        background-position: -0px -0px;
+        top: -50px;
+        width: 60px;
+        height: 35px;
+    }
+
+    &__title-warranty:before {
+        background-position: -0px -80px;
+        width: 38px;
+        height: 45px;
+        top: -60px;
+    }
+
+    &__title-payment:before {
+        background-position: -0px -35px;
+        width: 45px;
+        height: 45px;
+        top: -60px;
+    }
+
+
+    &__title-line {
+        display: block;
+        margin: 0 auto;
+        height: 1px;
+        background: #e51515;
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: #7a7a7a;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+}
+
+//коробка с новыми товарами
+//коробка с новыми товарами
+.new-arrival {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 0 65px;
+
+    .carousel__wrapper-new {
+        position: relative;
+        z-index: 1;
+        width: 1140px;
+        margin: 50px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .carousel__gallery-new {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .arrow-left {
+            left: -60px;
+        }
+
+        .arrow-right {
+            right: -60px;
+        }
+
+    }
+
+}
+
+//стрелки по всему сайту
+//стрелки по всему сайту
+
+.arrow-right,
+.arrow-left {
+    cursor: pointer;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+        box-shadow: 0 0 20px rgba(229, 21, 21, 0.35);
+        background-image: url(../img/arrow-hover.svg);
+    }
+}
+
+.arrow-left {
+    transform: scaleX(-1);
+}
+
+//Страница Корзина
+//Страница Корзина
+
+.basket {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 0 65px;
+
+    &__title {
+        text-align: center;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 30px 0;
+        color: @grey;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .basket-wrapper {
+        display: flex;
+        background-color: #fff;
+        border-radius: 30px;
+        border: 1px solid #e6e6e6;
+        width: 1140px;
+        margin: 50px auto 0;
+
+        .order {
+            border-right: 1px solid #e6e6e6;
+            width: 50%;
+
+
+            &__buttons-wrapper2,
+            &__buttons-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 50px;
+                width: 100%;
+            }
+
+            &__buttons-wrapper2 {
+                padding-left: 0;
+            }
+
+
+            &__button-register {
+                width: 295px;
+                height: 40px;
+                font-size: 14px;
+                font-weight: 500;
+                color: @grey;
+                border: 1px solid #e6e6e6;
+                border-radius: 20px;
+
+                &:hover {
+                    color: @white;
+                    border: none;
+                    background-color: #e51515;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            &__button-login {
+                background-color: #e51515;
+                font-size: 14px;
+                font-weight: 500;
+                color: #fff;
+                border-radius: 20px;
+                height: 40px;
+                width: 84px;
+
+                &:hover {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            &__button-login--box {
+                padding: 30px 55px;
+                border-left: 1px solid #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+            }
+
+
+            &__form {
+                padding: 30px 50px 0;
+
+                .order__buttons-wrapper {
+                    padding-left: 0;
+                }
+            }
+
+            &__button-pickup,
+            &__button-company {
+                border-radius: 20px;
+                width: 206px;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 30px;
+                color: @grey;
+                border: 1px solid #e6e6e6;
+
+                span {
+                    font-weight: 200;
+                }
+
+                &:hover {
+                    color: @white;
+                    background-color: @red;
+                }
+
+                &:focus {
+                    color: @white;
+                    background-color: @red;
+                }
+            }
+
+
+            &__form-textarea,
+            &__form-input {
+                font-size: 14px;
+                color: @grey;
+                width: 100%;
+                border-radius: 20px;
+                border: 1px solid #e6e6e6;
+            }
+
+            &__form-input {
+                margin-bottom: 20px;
+                padding: 0 20px;
+                height: 40px;
+            }
+
+            &__form-textarea {
+                max-width: 100%;
+                min-width: 100%;
+                height: 125px;
+                padding: 15px 20px;
+                margin-bottom: 25px;
+            }
+
+            &__button-by {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 14px;
+                font-weight: 500;
+                color: #fff;
+                padding: 0 1px 0 20px;
+                border-radius: 20px;
+                background-color: #e51515;
+                height: 40px;
+                width: 220px;
+                margin-bottom: 30px;
+
+                &:hover {
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            &__button-by:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+
+        }
+
+
+        .basket-product {
+            width: 50%;
+
+            .cart {
+                display: flex;
+                align-items: center;
+                padding: 30px 50px;
+                border-bottom: 1px solid #e6e6e6;
+
+                &__button-delete {
+
+                    margin-right: 30px;
+
+                    img {
+                        width: 29px;
+                        height: 29px;
+                    }
+                }
+
+                &__product-wrapper--image {
+                    padding: 25px;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 30px;
+                    border: 1px solid #e6e6e6;
+                    margin-right: 30px;
+                }
+
+                &__product-title {
+                    color: #282828;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+
+                }
+
+                &__product-prise {
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #e51515;
+                    margin-bottom: 30px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                .quantity-title {
+                    margin-right: 15px;
+                    font-size: 14px;
+                    color: #717171;
+                }
+
+                .cart__product-quantity {
+                    align-items: center;
+                }
+
+                .quantity__button--minus,
+                .quantity__button--plus,
+                .quantity__input {
+                    font-size: 14px;
+                    color: #282828;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 9.5px;
+                    border: 1px solid #e6e6e6;
+
+                }
+
+                .quantity__input {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 18px;
+                    margin: 0 10px;
+                }
+            }
+
+            .basket-product__total {
+                display: flex;
+                align-items: flex-end;
+                padding: 35px 50px;
+
+                .basket-product__total--title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #282828;
+                    padding-bottom: 3px;
+                    margin-right: 5px;
+                }
+
+                .basket-product__total--prise {
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #e51515;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+//СТРАНИЦА ОПИСАНИЯ ТОВАРА
+//СТРАНИЦА ОПИСАНИЯ ТОВАРА
+//СТРАНИЦА ОПИСАНИЯ ТОВАРА
+
+.product-cart {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 0 105px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 1140px;
+        margin: 50px auto 45px;
+    }
+
+    &__image-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        width: 540px;
+        padding: 60px 115px;
+        border-radius: 30px;
+        border: 1px solid #e6e6e6;
+    }
+
+    &__description {
+        background-color: #fff;
+        width: 540px;
+        border-radius: 30px;
+        border: 1px solid #e6e6e6;
+    }
+
+    .product-description__wrapper-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 160px 30px 30px;
+        border-bottom: 1px solid #e6e6e6;
+
+        .product-description__price {
+            font-weight: 700;
+            font-size: 24px;
+            color: #e51515;
+
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        .product-description__button-by {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            padding: 0 1px 0 20px;
+            border-radius: 20px;
+            background-color: #e51515;
+            height: 40px;
+            width: 160px;
+        }
+
+
+        .product-description__button-by:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+    }
+
+    .product-description__wrapper-center {
+        display: flex;
+        padding: 20px 0 40px 30px;
+        font-size: 14px;
+
+        li {
+            padding: 10px 0;
+        }
+
+        .product-description__info {
+            color: @grey;
+            margin-right: 40px;
+        }
+
+        .product-description__answer {
+            color: @black;
+
+            li {
+                font-weight: 500;
+            }
+        }
+    }
+
+    .product-cart--carousel__wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 1140px;
+        margin: 0 auto;
+
+        .arrow-left {
+            left: 0;
+        }
+
+        .arrow-right {
+            right: 0;
+        }
+
+
+        .product-cart--carousel__gallery {
+            display: flex;
+            justify-content: space-around;
+            width: 1020px;
+
+            .product-cart--block__item {
+                border-radius: 30px;
+                background: #fff;
+                padding: 35px;
+                border: 1px solid #e6e6e6;
+            }
+        }
+    }
+
+}
+
+//коробка с товаром
+//коробка с товаром
+
+.product-item {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    width: 255px;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 25px 55px;
+    }
+
+    &__name {
+        padding: 20px;
+        color: @black;
+        font-size: 14px;
+        font-weight: 500;
+        width: 100%;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    &__price {
+        padding: 20px 0;
+        width: 100%;
+        font-weight: 700;
+        font-size: 30px;
+        color: #e51515;
+        border-bottom: 1px solid #e6e6e6;
+
+
+        span {
+            font-size: 20px;
+        }
+    }
+
+    &__button-by {
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        padding: 0 1px 0 20px;
+        border-radius: 20px;
+        background-color: #e51515;
+        height: 40px;
+        width: 160px;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+
+//СТРАНИЦА ЛИЧНЫЕ ДАННЫЕ
+//СТРАНИЦА ЛИЧНЫЕ ДАННЫЕ
+//СТРАНИЦА ЛИЧНЫЕ ДАННЫЕ
+
+.my-account {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 0 100px;
+
+
+    &__wrapper {
+        background-color: @white;
+        border: 1px solid #e6e6e6;
+        border-radius: 30px;
+        width: 1110px;
+        margin: 30px auto 0;
+
+    }
+
+    &__top-buttons {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+
+    &__button-personal,
+    &__button-password,
+    &__button-history,
+    &__button-cancel,
+    &__button-safe {
+        margin: 0 15px;
+        border: 1px solid #e6e6e6;
+        font-size: 14px;
+        font-weight: 500;
+        color: @grey;
+        width: 160px;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    &__button-safe,
+    &__button-personal {
+        background-color: @red;
+        color: @white;
+    }
+
+    &__button-safe {
+        &:hover {
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &__data {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 170px;
+
+        input {
+            color: @black;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0 20px;
+            border-radius: 20px;
+            border: 1px solid #e6e6e6;
+            width: 350px;
+            height: 40px;
+            margin: 0 15px 20px;
+        }
+
+        button {
+            margin-top: 5px;
+        }
+    }
+
+}
+
+//СТРАНИЦА РЕГИСТРАЦИИ
+//СТРАНИЦА РЕГИСТРАЦИИ
+//СТРАНИЦА РЕГИСТРАЦИИ
+
+.page-register {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 0 70px;
+
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: @white;
+        border: 1px solid #e6e6e6;
+        border-radius: 30px;
+        width: 1110px;
+        padding-bottom: 50px;
+        margin: 30px auto 0;
+
+    }
+
+    &__button-register {
+        margin: 10px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        padding: 0 1px 1px 20px;
+        border-radius: 20px;
+        background-color: #e51515;
+        height: 40px;
+        width: 220px;
+    }
+
+
+    &__data {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 50px 170px 10px;
+
+        input {
+            color: @black;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0 20px;
+            border-radius: 20px;
+            border: 1px solid #e6e6e6;
+            width: 350px;
+            height: 40px;
+            margin: 0 15px 20px;
+        }
+
+    }
+
+}
+
+//СТРАНИЦА ВЫБОР МОДЕЛИ АВТО
+//СТРАНИЦА ВЫБОР МОДЕЛИ АВТО
+//СТРАНИЦА ВЫБОР МОДЕЛИ АВТО
+.model-car {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 0 40px;
+
+    &__wrapper {
+        width: 1140px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px auto 0;
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: @grey;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #e6e6e6;
+            width: 160px;
+            height: 40px;
+            margin: 15px 0px 15px 20px;
+
+            &:hover {
+                color: #fff;
+                background-color: @red;
+            }
+        }
+
+    }
+}
+
+//СТРАНИЦА ВЫБОРА ТОВАРА
+//СТРАНИЦА ВЫБОРА ТОВАРА
+//СТРАНИЦА ВЫБОРА ТОВАРА
+.product {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 0 50px;
+
+    .product__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1140px;
+        margin: 0 auto;
+
+        .product-item {
+            margin: 0 15px 50px 15px;
+        }
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: @grey;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid #e6e6e6;
+        width: 160px;
+        height: 40px;
+    }
+
+    .dropdown-product {
+        width: 1110px;
+        margin: 45px auto 0;
+
+        .button:hover {
+            background: @red;
+            color: #fff;
+        }
+
+        .dropdown-product--nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 50px;
+
+            &__item {
+                background: #fff;
+                border: 1px solid #e6e6e6;
+                border-radius: 20px;
+                height: 40px;
+            }
+
+            &__link {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                height: 40px;
+                font-size: 14px;
+                font-weight: 500;
+                width: 205px;
+                color: @grey;
+            }
+        }
+
+
+
+
+
+        &__car {
+            background-color: #fff;
+            border-radius: 30px;
+            border: 1px solid #e6e6e6;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 35px 25px;
+
+        }
+
+
+
+        &__car-list {
+            display: flex;
+        }
+
+        &__car-item {
+            margin-right: 20px;
+        }
+
+        &__model {
+            background-color: #fff;
+            border-radius: 30px;
+            border: 1px solid #e6e6e6;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__model-top {
+            padding: 30px 24px;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__model-center {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 15px 4px 30px;
+
+            .button {
+                margin: 15px 0px 15px 20px;
+            }
+        }
+
+        &__parts {
+            border-radius: 30px;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+        }
+
+        &__body,
+        &__engine {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 85px;
+            width: 365px;
+            border-radius: 30px;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+        }
+
+        &__car,
+        &__model,
+        &__parts,
+        &__body,
+        &__engine {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        &__car,
+        &__model,
+        &__parts,
+        &__body,
+        &__engine {
+            position: relative;
+            z-index: 1;
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                top: -25px;
+                border: 10px solid transparent;
+                border-bottom: 15px solid #e6e6e6;
+            }
+
+            &::after {
+                border-bottom: 15px solid #fff;
+                top: -22px;
+            }
+        }
+
+        &__car::after,
+        &__car::before {
+            left: 90px;
+        }
+
+        &__model::after,
+        &__model::before {
+            left: 320px;
+        }
+
+        &__parts::after,
+        &__parts::before {
+            left: 540px;
+        }
+
+        &__engine::after,
+        &__engine::before,
+        &__body::after,
+        &__body::before {
+            left: 170px;
+        }
+
+    }
+}
+
+//БЛОК ЗАГОЛОВКА С КОЛЕСОМ
+//БЛОК ЗАГОЛОВКА С КОЛЕСОМ
+
+.section__title {
+    text-align: center;
+    padding-top: 45px;
+    border-top: 1px solid #e6e6e6;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+
+
+    .section__title-image {
+        position: absolute;
+        z-index: 2;
+        top: -41px;
+        display: flex;
+        justify-content: center;
+        width: 90px;
+        background-color: #fff;
+        padding: 15px;
+    }
+
+
+    h2 {
+        color: @black;
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+    h3 {
+        margin-top: 25px;
+        font-size: 24px;
+        font-weight: 600;
+        color: @grey;
+    }
+
+}
+
+//СТРАНИЦА ВЫБОР ЗАЧАСТЕЙ АВТОМОБИЛЯ
+//СТРАНИЦА ВЫБОР ЗАЧАСТЕЙ АВТОМОБИЛЯ
+
+.car-parts {
+    border-bottom: 1px solid #e6e6e6;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1140px;
+        margin: 45px auto 0;
+    }
+
+    &__list {
+        width: 160px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+        margin: 0 15px 50px;
+
+        span {
+            color: @white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            background: @red;
+        }
+
+    }
+
+    &__item {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    &__link {
+        color: @grey;
+    }
+}
+
+//popup
+//popup
+.overlay {
+    background-color: @black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popup {
+        background-color: #fff;
+        display: flex;
+        border-radius: 30px;
+        width: 920px;
+        color: @black;
+        font-size: 14px;
+
+        &__title {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 14px;
+            width: 160px;
+            height: 40px;
+            border-radius: 20px;
+            color: @white;
+            background-color: @red;
+        }
+
+        &__wrapper-in {
+            padding: 50px;
+            width: 50%;
+            border-right: 1px solid #e6e6e6;
+
+            input {
+                border: 1px solid #e6e6e6;
+                padding: 0 20px;
+                width: 100%;
+                height: 40px;
+                border-radius: 20px;
+                font-size: 14px;
+            }
+
+            .popup__input-login {
+                margin-bottom: 25px;
+            }
+
+            .popup__wrapper {
+                margin: 15px 0 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .popup__checkbox {
+                    
+                    input[type="checkbox"]:checked,
+                    input[type="checkbox"]:not(:checked) {
+                        position: absolute;
+                        left: -9999px;
+                    }
+
+                    input[type="checkbox"]:checked + label,
+                    input[type="checkbox"]:not(:checked) + label {
+                        display: inline-block;
+                        position: relative;
+                        padding-left: 28px;
+                        line-height: 20px;
+                        cursor: pointer;
+                    }
+
+                    input[type="checkbox"]:checked + label:before,
+                    input[type="checkbox"]:not(:checked) + label:before {
+                        content: "";
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        width: 18px;
+                        height: 18px;
+                        border: 1px solid #dddddd;
+                        background-color: #ffffff;
+                    }
+
+                    input[type="checkbox"]:checked + label:before,
+                    input[type="checkbox"]:not(:checked) + label:before {
+                        border-radius: 2px;
+                    }
+
+                    input[type="checkbox"]:checked + label:before,
+                    input[type="checkbox"]:not(:checked) + label:before {
+                        border-radius: 100%;
+                    }
+
+                    input[type="checkbox"]:checked + label:after,
+                    input[type="checkbox"]:not(:checked) + label:after {
+                        content: "";
+                        position: absolute;
+                        -webkit-transition: all 0.2s ease;
+                        -moz-transition: all 0.2s ease;
+                        -o-transition: all 0.2s ease;
+                        transition: all 0.2s ease;
+                    }
+
+                    input[type="checkbox"]:checked + label:after,
+                    input[type="checkbox"]:not(:checked) + label:after {
+                        left: 5px;
+                        top: 5px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        background-color: #e145a3;
+                    }
+
+
+
+                }
+
+
+                a {
+                    font-size: 14px;
+                    color: @black;
+                }
+            }
+        }
+
+        &__wrapper-up {
+            padding: 50px;
+            width: 50%;
+
+            p {
+                font-size: 14px;
+                font-weight: 200;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+//дропдаун
+//дропдаун
+
+.footer {
+    background: url(../img/footer-bcg.png) center no-repeat;
+    background-size: cover;
+    font-size: 12px;
+    color: @white;
+    background-color: @black;
+
+    a {
+        color: @white;
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        width: 1140px;
+        display: flex;
+        justify-content: center;
+
+        .header__column-2 {
+            width: 350px;
+            padding: 60px 0 50px;
+        }
+    }
+
+    &__text-copyright {
+        padding: 45px 0;
+    }
+}
+
+@media (max-width: 1220px) {
+    .section__title {
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+    }
+
+    main {
+        background-image: none;
+    }
+
+    .header {
+        &__links-list--account {
+            padding: 10px 0 0 0;
+        }
+
+        &__wrapper,
+        &__wrapper2 {
+            padding: 0 20px 20px;
+            width: 100%;
+        }
+
+        &__wrapper2 {
+            padding: 25px 0 30px;
+        }
+
+        &__column-1 {
+            padding-left: 0px;
+        }
+    }
+
+    .nav__main-menu {
+
+        .nav__wrapper {
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 20px;
+
+            .burger-menu {
+                font-size: 14px;
+                width: 95px;
+                height: 75px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .main-menu {
+                display: none;
+            }
+        }
+    }
+
+    .menu-top {
+        padding: 20px 0 40px;
+
+        &__list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .home {
+        height: 375px;
+
+        &__wrapper {
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        &__nissan {
+            padding-right: 40px;
+        }
+
+        &__infiniti {
+            padding-left: 40px;
+        }
+
+    }
+
+    .advantages {
+        padding: 135px 0 85px;
+
+        &__wrapper {
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        &__column {
+            text-align: center;
+            padding: 0 20px;
+            width: 33.33%;
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__text {
+            font-size: 12px;
+        }
+
+    }
+
+    .new-arrival {
+        .table-hidden {
+            display: none;
+        }
+
+        .carousel__wrapper-new {
+            width: 730px;
+            padding: 0;
+            margin: 80px auto 0;
+
+            .arrow-left {
+                top: -60px;
+                left: 320px;
+            }
+
+            .arrow-right {
+                top: -60px;
+                right: 320px;
+            }
+
+        }
+
+    }
+
+    .product-item {
+        width: 230px;
+
+        &__name {
+            padding: 20px 10px;
+        }
+
+    }
+
+    .basket {
+        &__title {
+            font-size: 18px;
+        }
+
+
+        .basket-wrapper {
+            flex-direction: row-reverse;
+            width: 730px;
+            margin: 30px auto 0;
+
+            .order {
+                width: 420px;
+                border-right: none;
+                border-left: 1px solid #e6e6e6;
+
+                &__buttons-wrapper {
+                    display: none;
+                }
+
+                &__form {
+                    padding: 20px 20px 30px;
+                }
+
+
+                &__button-pickup,
+                &__button-company {
+                    margin-bottom: 20px;
+                }
+
+                &__button-company {
+                    width: 205px;
+                }
+
+                &__button-pickup {
+                    width: 155px;
+                }
+
+            }
+
+
+            .basket-product {
+                width: 320px;
+
+                .table-hidden {
+                    display: none;
+                }
+
+                .cart {
+                    position: relative;
+                    z-index: 1;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 20px 20px 40px;
+
+                    &__button-delete {
+                        position: absolute;
+                        z-index: 1;
+                        top: 80px;
+                        right: 0;
+                        margin-right: 30px;
+                    }
+
+                    &__product-wrapper--image {
+                        margin: 0 0 20px;
+                    }
+
+                    &__product-title {
+                        margin-bottom: 20px;
+                    }
+
+                    &__product-prise {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .basket-product__total {
+                    padding: 30px 20px 40px;
+
+                    .basket-product__total--prise {
+                        font-size: 30px;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    .product-cart {
+        padding: 0 0 70px;
+
+        &__wrapper {
+            width: 730px;
+            margin: 50px auto 30px;
+        }
+
+        &__image-box {
+            width: 355px;
+            padding: 60px 50px;
+
+            img {
+                width: 250px;
+                height: auto;
+            }
+        }
+
+        &__description {
+            width: 355px;
+        }
+
+        .product-description__wrapper-top {
+            padding: 25px 20px;
+
+            .product-description__price {
+                font-size: 30px;
+
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .product-description__wrapper-center {
+            display: flex;
+            padding: 20px 20px;
+
+            li {
+                padding: 10px 0;
+            }
+        }
+
+        .product-cart--carousel__wrapper {
+            width: 730px;
+
+            .arrow-right,
+            .arrow-left {
+                width: 30px;
+                height: 30px;
+            }
+
+            .arrow-left {
+                left: 0;
+            }
+
+            .arrow-right {
+                right: 0;
+            }
+
+            .product-cart--carousel__gallery {
+                width: 670px;
+
+                .table-hidden {
+                    display: none;
+                }
+
+                .product-cart--block__item {
+                    padding: 25px;
+                }
+            }
+        }
+
+    }
+
+    .car-parts {
+
+        &__wrapper {
+            width: 730px;
+            margin: 40px auto 0;
+        }
+
+        &__list {
+            margin: 0 10px 45px;
+        }
+    }
+
+    .model-car {
+        &__wrapper {
+            width: 768px;
+            margin: 15px auto 0;
+
+            .button {
+                margin: 10px 0px 10px 20px;
+            }
+        }
+    }
+
+    .my-account {
+        padding: 0 0 70px;
+
+        &__wrapper {
+            border-radius: 0;
+            border: none;
+            width: 100%;
+            margin: 10px auto 0;
+
+        }
+
+        &__top-buttons {
+            padding: 20px 0;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+
+        &__data {
+            margin: 0 auto;
+            width: 768px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px 0 0;
+
+            input {
+                margin: 0 10px 20px;
+            }
+        }
+
+    }
+
+    .page-register {
+
+        &__wrapper {
+            border-radius: 0;
+            width: 100%;
+            padding: 40px 0;
+            margin: 30px auto 0;
+        }
+
+        &__data {
+            width: 768px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+
+            input {
+                margin: 0 10px 20px;
+            }
+
+        }
+
+    }
+
+    .product {
+        .table-hidden {
+            display: none;
+        }
+
+        padding: 0 0 30px;
+
+        .product__wrapper {
+            width: 750px;
+            margin: 0 auto;
+
+            .product-item {
+                width: 230px;
+                margin: 0 10px 20px 10px;
+            }
+        }
+
+        .dropdown-product {
+            width: 740px;
+            margin: 25px auto 0;
+
+            .dropdown-product--nav {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 30px;
+
+                &__item:nth-child(2) {
+                    margin: 0 50px;
+                }
+
+                &__item:last-child {
+                    margin-left: 50px;
+                }
+
+                &__item {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            width: 100%;
+
+            .header__column-2 {
+                padding: 50px 0 30px;
+            }
+        }
+    }
+
+    .overlay {
+
+
+        .popup {
+            width: 700px;
+
+            &__wrapper-in {
+                padding: 40px;
+                width: 50%;
+            }
+
+            &__wrapper-up {
+                padding: 40px;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {}
+
+@media (max-width: 990px) {
+    .header {
+        &__column-3 {
+            .header__cart-text {
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .mobile-hidden {
+        display: none;
+    }
+
+    //     хедер
+    .header {
+        position: relative;
+        z-index: 1;
+
+        &__links-list--account {
+            padding: 5px 0 0 0;
+        }
+
+        &__wrapper {
+            padding: 10px;
+        }
+
+        &__column-1 {
+            padding-left: 10px;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 60%;
+        }
+
+        &__column-2 {
+            padding-top: 60px;
+            display: flex;
+            justify-content: center;
+            width: 350px;
+            margin: 0 auto;
+            height: auto;
+
+            .header__logo-image {
+                height: auto;
+                width: 70%;
+            }
+        }
+
+        &__column-3 {
+            width: 40%;
+            top: 50px;
+            right: 0;
+            position: absolute;
+            padding-right: 0px;
+
+        }
+
+    }
+
+    .nav__search-form {
+        .nav__input-search {
+            display: none;
+        }
+    }
+
+
+    //  главная страница
+    .home {
+        display: block;
+        height: auto;
+        background-image: none;
+
+        &__wrapper {
+            padding: 0;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            font-size: 12px;
+            margin-bottom: 15px;
+            line-height: 16px;
+        }
+
+        &__infiniti,
+        &__nissan {
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 70px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        &__nissan {
+            background-image: url(../img/mobile-nissan.png);
+            border-bottom: 3px solid @red;
+        }
+
+        &__infiniti {
+            background-image: url(../img/mobile-infiniti.png);
+
+            .home__link {
+                margin-left: 0;
+                flex-direction: row;
+                padding: 0 1px 1px 20px;
+
+                img {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+
+    // блок преимущества
+    .advantages {
+        padding: 50px 0 40px;
+
+        &__wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__column {
+            text-align: center;
+            padding: 50px 20px;
+            width: 100%;
+        }
+
+    }
+
+    // блок последнии поступления
+    .new-arrival {
+
+        .mobile-hidden {
+            display: none;
+        }
+
+        .carousel__wrapper-new {
+            width: 360px;
+            margin: 20px auto 0;
+
+            .arrow-left {
+                top: 70px;
+                left: 0px;
+            }
+
+            .arrow-right {
+                top: 70px;
+                right: 0px;
+            }
+
+        }
+
+    }
+
+    //    коробка с продуктами
+    .product-item {
+        margin: 0 auto;
+
+        &__image {
+            padding: 15px;
+        }
+
+        &__name {
+            padding: 20px 20px;
+        }
+
+    }
+
+    .section__title {
+
+        h2 {
+            font-size: 18px;
+
+        }
+
+        h3 {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+    }
+
+
+    //    страница корзина
+    .basket {
+        &__title {
+            padding: 20px 0;
+            font-size: 18px;
+        }
+
+
+        .basket-wrapper {
+            align-items: center;
+            flex-direction: column-reverse;
+            width: 100%;
+            border: none;
+            margin: 30px auto 0;
+
+            .order {
+                border-radius: 30px;
+                width: 340px;
+                border: 1px solid #e6e6e6;
+
+                &__buttons-wrapper {
+                    display: none;
+                }
+
+                &__buttons-wrapper2 {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &__form {
+                    padding: 20px 20px 30px;
+                }
+
+                &__button-company {
+                    margin-bottom: 30px;
+
+                }
+
+                &__button-pickup {
+                    width: 155px;
+                    margin-bottom: 10px;
+                }
+
+                &__button-by {
+                    margin-bottom: 0px;
+                }
+
+            }
+
+
+            .basket-product {
+                border-radius: 30px;
+                border: 1px solid #e6e6e6;
+                width: 340px;
+                margin-bottom: 30px;
+
+                .table-hidden {
+                    display: none;
+                }
+
+                .cart {
+                    text-align: center;
+                    position: relative;
+                    z-index: 1;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 20px 30px 40px;
+
+                    &__button-delete {
+                        position: absolute;
+                        z-index: 1;
+                        top: 90px;
+                        right: 20px;
+                        margin-right: 30px;
+                    }
+
+                    &__product-wrapper--image {
+                        align-self: flex-start;
+                        width: auto;
+                        height: auto;
+                        margin: 0 0 20px;
+
+                        img {
+                            width: 140px;
+                        }
+                    }
+
+                    &__product-title {
+                        margin: 0px 40px 20px;
+                    }
+
+                    &__product-prise {
+                        margin-bottom: 20px;
+                    }
+
+                    .cart__product-quantity {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                .basket-product__total {
+                    display: flex;
+                    justify-content: center;
+                }
+
+            }
+        }
+    }
+
+    .product-cart {
+        padding: 0 0 50px;
+
+        &__image-box {
+            margin-bottom: 25px;
+        }
+
+        &__wrapper {
+            width: 360px;
+            margin: 25px auto;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__description {
+            width: 355px;
+        }
+
+        .product-description__wrapper-center {
+            li {
+                padding: 8px 0;
+            }
+        }
+
+        .product-cart--carousel__wrapper {
+            width: 320px;
+
+            .arrow-left {
+                left: -30px;
+            }
+
+            .arrow-right {
+                right: -30px;
+            }
+
+            .product-cart--carousel__gallery {
+                width: 100%;
+
+
+                .table-hidden {
+                    display: none;
+                }
+
+                .product-cart--block__item {
+                    width: 80px;
+                    height: 80px;
+                    padding: 10px;
+
+                    img {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .car-parts {
+        &__wrapper {
+            width: 360px;
+            margin: 30px auto 0;
+        }
+
+        &__list {
+            width: 160px;
+            margin: 0 10px 50px;
+        }
+    }
+
+    .model-car {
+        &__wrapper {
+            width: 320px;
+            margin: 15px auto 0;
+
+            .button {
+                width: 145px;
+                margin: 8px 5px 8px 5px;
+            }
+        }
+    }
+
+    .my-account {
+        padding: 0 0 70px;
+
+        &__wrapper {
+            border: none;
+            width: 100%;
+            margin: 10px auto 0;
+
+        }
+
+        &__top-buttons {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px 0 0;
+            border-bottom: 1px solid #e6e6e6;
+
+            button {
+                margin-bottom: 15px;
+            }
+        }
+
+        button {
+            width: 150px;
+        }
+
+        &__data {
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .product {
+        padding: 0 0 30px;
+
+        .product__wrapper {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+
+            .product-item {
+                width: 280px;
+                margin: 0 0 20px;
+            }
+        }
+
+        .dropdown-product {
+            width: 320px;
+            margin: 25px auto 0;
+
+            .dropdown-product--nav {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 10px;
+
+                &__item:nth-child(2) {
+                    margin: 0px;
+                }
+
+                &__item:last-child {
+                    margin-left: 0px;
+                }
+
+                &__item {
+                    margin-bottom: 20px;
+                }
+
+                &__link {
+                    width: 150px;
+                }
+            }
+        }
+    }
+
+    .page-register {
+
+
+        &__data {
+            width: 320px;
+        }
+
+    }
+
+    .footer {
+        &__wrapper {
+            width: 100%;
+        }
+
+
+        &__text-copyright {
+            padding: 30px 0 45px;
+        }
+    }
+
+
+    .overlay {
+        height: 100%;
+        padding: 50px;
+
+        .popup {
+            flex-direction: column;
+            width: 320px;
+
+            &__wrapper-in {
+                padding: 40px 40px 0;
+                width: 100%;
+                border: 0;
+            }
+
+            &__wrapper-up {
+                padding: 40px;
+                width: 100%;
+            }
+        }
+    }
+
+    .product {
+
+        .dropdown-product {
+            width: 320px;
+
+            .car-parts__wrapper {
+                width: 360px;
+                margin: 30px auto 0;
+
+                .car-parts__list {
+                    width: 140px;
+                    margin: 0 10px 50px;
+                }
+            }
+
+            .button {
+                width: 130px;
+            }
+
+            &__body,
+            &__engine {
+                padding: 0 30px;
+                width: 300px;
+            }
+
+
+
+            &__car::after,
+            &__car::before {
+                left: 90px;
+            }
+
+            &__model::after,
+            &__model::before {
+                left: 230px;
+            }
+
+            &__parts::after,
+            &__parts::before {
+                left: 90px;
+            }
+
+            &__engine::after,
+            &__engine::before {
+                left: 230px;
+            }
+
+            &__body::after,
+            &__body::before {
+                left: 90px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 620px) {}
+
+@media (max-width: 360px) {
+    .header {
+        &__column-2 {
+            width: 320px;
+
+            .header__logo-image {
+                width: 100%;
+            }
+        }
+    }
+
+    .new-arrival {
+        .carousel__wrapper-new {
+            width: 100%;
+        }
+    }
+
+    .car-parts {
+        &__wrapper {
+            width: 320px;
+        }
+
+        &__list {
+            width: 140px;
+            margin: 0 10px 30px;
+        }
+    }
+
+    .product-cart {
+        &__wrapper {
+            width: 320px;
+        }
+
+        &__image-box,
+        &__description {
+            width: 310px;
+        }
+
+        .product-cart--carousel__wrapper {
+            width: 280px;
+
+            .arrow-left {
+                left: -20px;
+            }
+
+            .arrow-right {
+                right: -20px;
+            }
+
+            .product-cart--carousel__gallery {
+
+                .product-cart--block__item {
+                    width: 70px;
+                    height: 70px;
+
+                    img {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+
+        .product-description__wrapper-top {
+            .product-description__price {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .my-account {
+        button {
+            margin: 5px;
+            width: 150px;
+        }
+    }
+
+}
